@@ -1,0 +1,16 @@
+.hero__title {
+  margin-top: 0;
+  margin-bottom: $cardGetGap;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $titleColor;
+
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+  }
+}

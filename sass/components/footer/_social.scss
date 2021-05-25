@@ -1,0 +1,37 @@
+.social__text {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $titleColor;
+}
+.footer__icons__list {
+  @extend %icons;
+}
+.footer__icons__item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer__icons__link {
+  @include icons-link;
+  background-color: rgba(255, 255, 255, 0.1);
+  &:hover,
+  &:focus {
+    background-color: $accentCcolor;
+    fill: $titleColor;
+  }
+}
+
+.footer__icons {
+  @include icons-svg;
+  fill: $titleColor;
+}
+.footer__social {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}

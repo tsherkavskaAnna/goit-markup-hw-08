@@ -1,0 +1,50 @@
+@media screen and(max-width: 1199px) {
+  .service {
+    display: none;
+  }
+}
+.service {
+  @extend %container;
+  padding-bottom: 94px;
+}
+.title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.service__list {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: calc(-1 * #{$cardGetGap});
+  margin-top: calc(-1 * #{$cardGetGap});
+}
+.service__item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - ((2 * #{$cardGetGap})) / 3));
+}
+.service__thumb {
+  margin-right: 0px;
+  max-width: 370px;
+  position: relative;
+}
+.service__box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @extend %icons;
+  max-width: 370px;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+.service__box__title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: $titleColor;
+}

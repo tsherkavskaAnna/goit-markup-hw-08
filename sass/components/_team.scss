@@ -1,0 +1,103 @@
+.team {
+  background-color: $teamBackgroudColor;
+  padding-bottom: 60px;
+
+  @media screen and(min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.title {
+  margin-bottom: 30px;
+  color: $secondaryTextColor;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+}
+.team__list {
+  @media screen and(min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: calc(#{$cardGetGap} * (-1));
+    margin-top: calc(#{$cardGetGap} * (-1));
+  }
+}
+.team__item {
+  flex-basis: 100%;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and(max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - (2 * #{$cardGetGap})) / 2);
+    margin-left: $cardGetGap;
+    margin-top: $cardGetGap;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - (4 * #{$cardGetGap})) / 4);
+  }
+}
+
+.team__box {
+  padding-top: $cardGetGap;
+  padding-bottom: $cardGetGap;
+  @media screen and(min-width: 1200px) {
+    padding: 30px 32px;
+  }
+}
+.team__name {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.team__position {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $mainTextColorcolor;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+.social__icons__list {
+  @extend %icons;
+}
+.social__icons {
+  @include icons-svg;
+  fill: $iconsColor;
+  &:hover,
+  &:focus {
+    fill: $titleColor;
+  }
+}
+
+.social__link {
+  @include icons-link;
+  background-color: $titleColor;
+  &:hover,
+  &:focus {
+    background-color: $accentCcolor;
+    fill: $titleColor;
+  }
+}

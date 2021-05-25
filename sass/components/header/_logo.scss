@@ -1,0 +1,17 @@
+.logocolor {
+  color: $accentCcolor;
+}
+.logo {
+  font-family: $logoFont;
+  color: $secondaryTextColor;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+.logo-color-footer {
+  color: $titleColor;
+}

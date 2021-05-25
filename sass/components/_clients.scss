@@ -1,0 +1,53 @@
+.clients {
+  margin: 0;
+  @media screen and(min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.clients__list {
+  margin-left: calc(#{$cardGetGap} * (-1));
+  margin-top: calc(#{$cardGetGap} * (-1));
+  @media screen and(min-width: 320px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.clients__item {
+  margin-top: $cardGetGap;
+  margin-left: $cardGetGap;
+  height: 90px;
+
+  @media screen and (max-width: 479px) {
+    flex-basis: calc(100% / 2 - #{$cardGetGap});
+  }
+
+  @media screen and(min-width: 480px) {
+    flex-basis: calc(100% / 2 - #{$cardGetGap});
+  }
+  @media screen and(min-width: 768px) {
+    flex-basis: calc(100% / 3 - #{$cardGetGap});
+  }
+  @media screen and(min-width: 1200px) {
+    flex-basis: calc(100% / 6 - #{$cardGetGap});
+  }
+}
+.clients__link {
+  @extend %icons;
+  width: 100%;
+  height: 90px;
+  border: 1px solid $iconsColor;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border-color $timeDuration $timingFunction,
+    fill $timeDuration $timingFunction;
+}
+.clients__link {
+  fill: $iconsColor;
+  &:hover,
+  &:focus {
+    border-color: $accentCcolor;
+    fill: $accentCcolor;
+  }
+}
