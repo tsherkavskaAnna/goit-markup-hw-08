@@ -1,8 +1,22 @@
 .container-header {
-  display: flex;
-  align-items: center;
-  @extend %container;
+  @media screen and (min-width: 320px) {
+    max-width: 480px;
+    padding: 16px 15px;
+    margin: auto;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 21px 15px;
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 .header {
+  position: relative;
   border: 1px solid #ececec;
 }
