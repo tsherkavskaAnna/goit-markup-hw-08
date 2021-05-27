@@ -2,24 +2,45 @@
   padding: 20px 24px;
   border: 1px solid #eee;
   border-top: none;
+  flex-grow: 1;
 }
 .portfolio__list {
   display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 94px;
-  margin-left: calc(#{$cardGetGap} * (-1));
-  margin-top: calc(#{$cardGetGap} * (-1));
-  list-style: none;
+  align-items: center;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: calc(#{$cardGetGap} * (-1));
+    margin-top: calc(#{$cardGetGap} * (-1));
+  }
 }
-.portfolio__list > .portfolio__item {
-  flex-basis: calc(100% - (3 * (#{$cardGetGap})) / 3);
-  margin-left: $cardGetGap;
-  margin-top: $cardGetGap;
-  max-width: 370px;
+.portfolio__item {
+  display: flex;
+  width: 450px;
   background: $titleColor;
   border: 1px solid #eeeeee;
-  box-sizing: border-box;
+  flex-basis: calc((100% - (1 * #{$cardGetGap})) / 1);
+
+  @media screen and(max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and(min-width: 768px) {
+    width: 354px;
+    margin-left: $cardGetGap;
+    margin-top: $cardGetGap;
+    flex-basis: calc((100% - (2 * #{$cardGetGap})) / 2);
+  }
+  @media screen and(min-width: 1200px) {
+    width: 370px;
+    flex-basis: calc((100% - (3 * #{$cardGetGap})) / 3);
+  }
 }
+
 .projects__text {
   font-weight: bold;
   font-size: 18px;
@@ -33,8 +54,10 @@
   color: $mainTextColorcolor;
 }
 .portfolio__link {
-  display: block;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   color: currentColor;
   transition: box-shadow $timeDuration $timingFunction;
   &:hover,

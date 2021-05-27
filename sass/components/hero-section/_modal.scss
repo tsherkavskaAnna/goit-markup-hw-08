@@ -10,7 +10,6 @@
 .modal {
   position: absolute;
   width: 100%;
-  max-width: 528px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -19,6 +18,13 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 .modal__close {
   position: absolute;
@@ -27,6 +33,7 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
+  z-index: 100;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: $titleColor;
@@ -78,7 +85,7 @@
 .modal__input {
   display: block;
   padding-left: 42px;
-  width: 448px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -118,12 +125,25 @@ textarea.modal__input {
   box-sizing: border-box;
   border-radius: 4px;
 }
-.checkbox__link {
+.checkbox__label {
+  font-size: 12px;
+  line-height: 1.17;
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.71;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
+.checkbox__link {
+  font-size: 12px;
+  line-height: 1.17;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 .checkbox__input {
   /*appearance: none;*/
   position: absolute;

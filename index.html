@@ -29,6 +29,64 @@
               <a class="nav__link" href="#">Контакты</a>
             </li>
           </ul>
+          <button class="mobile__menu__btn is-open" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+          <svg class="mobile__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+          <use class="mobile__icon__open" href="./Images/Icons/sprite.svg#icon-closemobile"></use>
+          <use class="mobile__icon__close" href="./Images/Icons/sprite.svg#icon-openmobile"></use>
+          </svg>
+        </button>
+         <!--Mobile munu-->
+     <div class="mobile-menu" data-menu>
+           <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link mobile-menu__link-current" href="#">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class=" mobile-menu__contacts__list">
+          <li class="mobile-menu__contacts__item">
+            <li class="mobile-menu__contacts__item">
+            <a class="mobile-menu__contacts__link" href="telto:+380961111111">
+              +380961111111
+            <a class="mobile-menu__contacts__mail" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </li>
+            </a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__social__list">
+          <li class="mobile-menu__social__item">
+            <a class="mobile-menu__social__link" href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+             >Instagram</a>
+          </li>
+          <li class="mobile-menu__social__item">
+            <a class="mobile-menu__social__link" href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+             >Twitter</a>
+          </li>
+          <li class="mobile-menu__social__item">
+            <a class="mobile-menu__social__link" href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+             >Facebook</a>
+          </li>
+          <li class="mobile-menu__social__item">
+            <a class="mobile-menu__social__link" href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+             >Linkedin</a>
+          </li>
+        </ul>
+  </div>
         </nav>
         <!--Contacts-->
         <ul class="header__contacts__list">
@@ -49,14 +107,8 @@
             </a>
           </li>
         </ul>
-        <button class="mobile__menu__btn">
-          <svg class="mobile__icon" width="40" height="40">
-          <use class="mobile__icon__close" href="./Images/Icons/sprite.svg#icon-closemobile"></use>
-            <use class="mobile__icon__open" href="./Images/Icons/sprite.svg#icon-openmobile"></use>
-          </svg>
-        </button>
-      </div>
-    </header>
+    </div>
+  </header>
     <!--Order service-->
     <main>
       <section class="hero">
@@ -614,6 +666,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>-->
   </body>
